@@ -12,5 +12,9 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Output of the make tool
+bin
+build
+
 # Dependency directories (remove the comment below to include it)
 # vendor/

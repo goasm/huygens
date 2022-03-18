@@ -1,13 +1,12 @@
 BUILD_FLAGS := -ldflags "-s -w"
-OUTPUT_PATH := $(PWD)/bin
+OUTPUT_PATH := ./bin/huygens
 
 .PHONY: default
 
 default: build
 
-build: export GOBIN = $(OUTPUT_PATH)
 build:
-	go install $(BUILD_FLAGS) ./cmd/...
+	go build -o $(OUTPUT_PATH) $(BUILD_FLAGS) ./cmd/huygens
 	@echo "Build done"
 
 clean:
